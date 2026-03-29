@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Resume Analyzer</h1>
+            <p>Powered by Google Gemini</p>
+        </header>
+
+        <div class="upload-section">
+            <div id="drop-zone" class="drop-zone">
+                <p>Drag & Drop your Resume (PDF or Text)</p>
+                <span>or</span>
+                <label for="file-input" class="custom-file-upload">
+                    Browse File
+                </label>
+                <input type="file" id="file-input" accept=".pdf,.txt,.md" />
+                <p id="file-name" class="file-name"></p>
+            </div>
+            <button id="analyze-btn" disabled>Analyze Resume</button>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Consulting the AI...</p>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2>Analysis Result</h2>
+            <div id="output" class="output-box"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
